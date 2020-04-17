@@ -1,11 +1,12 @@
 .offer {
   display: flex;
+  justify-content: space-between;
 }
 .offer__item {
   display: flex;
   flex-direction: column;
-  width: 33%;
-  padding: 12px;
+  width: 31.8%;
+  padding: 19px 12px 12px;
   background: #FFFFFF;
   box-shadow: 0px 5px 20px rgba(0, 50, 97, 0.15), 0px 7px 10px rgba(0, 50, 97, 0.1);
   border-radius: 8px;
@@ -14,15 +15,17 @@
   margin: 0 12px;
   font-weight: bold;
   font-size: 22px;
+  line-height: 25px;
 }
 .offer__item__features {
-  margin: 0 12px;
+  margin: 11px 20px 28px;
   display: flex;
   flex-wrap: wrap;
   font-size: 17px;
+  line-height: 21px;
   color: #0B1013;
   p {
-    margin: 16px 26px 0 0;
+    margin: 19px 26px 0 0;
     white-space: nowrap;
     & > span {
       font-weight: 600;
@@ -34,19 +37,24 @@
   margin: auto 12px 0;
   font-weight: 500;
   font-size: 17px;
+  line-height: 19px;
   color: #D27E00;
-  p > span {
-    font-size: 19px;
+  p {
+    margin: 0;
+    & > span {
+      font-size: 19px;
+    }
   }
 
 }
 .offer__item__action {
-  // margin-top: auto;
+  margin-top: 16px;
   a {
     display: block;
-    padding: 20px 0 24px;
+    padding: 20px 0 19px;
     text-align: center;
     font-size: 16px;
+    line-height: 24px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
