@@ -1,0 +1,126 @@
+.form {
+  font-size: 19px;
+  padding: 32px 20px;
+  background: #FFFFFF;
+  border: 2px solid rgba(180, 203, 220, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px rgba(0, 50, 97, 0.15), 0px 7px 10px rgba(0, 50, 97, 0.1);
+  border-radius: 8px;
+}
+.form__hedaer {
+  padding: 0 4px 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0B1013;
+  border-bottom: 1px solid #E6E9EB;
+}
+.form__item {
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0B1013;
+    outline: 0;
+    padding: 8px 30px 11px 12px;
+    font-size: 16px;
+    background: #FBFCFC;
+    border: 2px solid #B4CBDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    &:hover, &:focus {
+      border-color: #78A6C9;
+    }
+    &:active {
+      border-color: #4585B4;
+    }
+  }
+  button {
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 16px 16px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0B1013;
+    text-align: center;
+    text-transform: uppercase;
+    background: #FBFCFC;
+    border: 2px solid #4EAAFF;
+    border-radius: 6px;
+    &:hover, &:focus {
+      color: #FBFCFC;
+      background: #4EAAFF;
+    }
+    &:active {
+      color: #FBFCFC;
+      background: #3998F0;
+    }
+  }
+}
+
+.form__item_border_top {
+  border-top: 1px solid #E6E9EB;
+}
+
+.form__checkbox {
+  display: block;
+  color: #0B1013;
+  font-size: 14px;
+  line-height: 18px;
+  user-select: none;
+  cursor: pointer;
+  a {
+    color: inherit;
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ span {
+      &:before {
+        border-color: #4EAAFF; 
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  & > span {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #FBFCFC;
+      border: 2px solid #B4CBDC;
+      border-radius: 4px;
+    }
+    &:after {
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      height: 14px;
+      width: 14px;
+      background: #4EAAFF;
+      border-radius: 50%;
+    }
+  }
+  &:hover input[type="checkbox"] ~ span {
+    &:before {
+      border-color: #4EAAFF; 
+    }
+    &:after {
+      opacity: 0.7;
+    }
+  }
+}
