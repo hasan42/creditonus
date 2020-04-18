@@ -35,6 +35,7 @@
     border: 2px solid #B4CBDC;
     box-sizing: border-box;
     border-radius: 2px;
+    transition: all 0.3s ease-out;
     &:hover, &:focus {
       border-color: #78A6C9;
     }
@@ -55,6 +56,7 @@
     background: #FBFCFC;
     border: 2px solid #4EAAFF;
     border-radius: 6px;
+    transition: all 0.3s ease-out;
     &:hover, &:focus {
       color: #FBFCFC;
       background: #4EAAFF;
@@ -87,6 +89,7 @@
   top: 4px;
   right: 4px;
   fill: #B4CBDC;
+  transition: all 0.3s ease-out;
 }
 .input-ico_personal {
   top: 8px;
@@ -136,17 +139,19 @@
       background: #FBFCFC;
       border: 2px solid #B4CBDC;
       border-radius: 4px;
+      transition: all 0.3s ease-out;
     }
     &:after {
       content: '';
       opacity: 0;
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: -1px;
+      left: 3px;
       height: 14px;
       width: 14px;
       background: #4EAAFF;
       border-radius: 50%;
+      transition: all 0.3s ease-out;
     }
   }
   &:hover input[type="checkbox"] ~ span {

@@ -50,6 +50,7 @@
 .offer__item__action {
   margin-top: 16px;
   a {
+    position: relative;
     display: block;
     padding: 20px 0 19px;
     text-align: center;
@@ -61,11 +62,40 @@
     color: #29472C;
     background: linear-gradient(90deg, #FFD268 0%, #FFDD64 100%);
     border-radius: 6px;
-    &:hover {
+
+    span {
+      position:relative;
+      z-index: 3;
+    }
+
+
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      z-index: 1;
+      opacity: 0;
+      border-radius: 6px;
+      transition: opacity 0.3s ease-out;
+    }
+    &:before {
       background: linear-gradient(90deg, #FFCC55 0%, #FFE68B 100%);
     }
-    &:active {
+    &:after {
       background: #FFCC55;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+    &:active {
+      &:after {
+        opacity: 1;
+      }
     }
   }
 }
