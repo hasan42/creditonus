@@ -1,20 +1,27 @@
 .form {
   font-size: 19px;
-  padding: 32px 20px;
+  line-height: 23px;
+  color: #0B1013;
+  padding: 30px 18px 22px;
   background: #FFFFFF;
   border: 2px solid rgba(180, 203, 220, 0.5);
   box-sizing: border-box;
   box-shadow: 0px 5px 20px rgba(0, 50, 97, 0.15), 0px 7px 10px rgba(0, 50, 97, 0.1);
   border-radius: 8px;
 }
-.form__hedaer {
+.form__header {
   padding: 0 4px 8px;
   font-size: 18px;
+  line-height: 25px;
   font-weight: bold;
-  color: #0B1013;
   border-bottom: 1px solid #E6E9EB;
 }
+.form__description {
+  margin: 18px 4px 0;
+}
 .form__item {
+  margin-right: 4px;
+  margin-left: 4px;
   input[type="text"] {
     display: block;
     width: 100%;
@@ -22,7 +29,7 @@
     line-height: 20px;
     color: #0B1013;
     outline: 0;
-    padding: 8px 30px 11px 12px;
+    padding: 8px 30px 8px 12px;
     font-size: 16px;
     background: #FBFCFC;
     border: 2px solid #B4CBDC;
@@ -39,7 +46,7 @@
     outline: 0;
     display: block;
     width: 100%;
-    padding: 16px 16px 15px;
+    padding: 12px 16px 11px;
     font-size: 14px;
     font-weight: bold;
     color: #0B1013;
@@ -61,6 +68,33 @@
 
 .form__item_border_top {
   border-top: 1px solid #E6E9EB;
+}
+
+.form__item_icon {
+  position: relative;
+  input[type="text"] {
+    &:hover ~ .input-ico, &:focus ~ .input-ico {
+      fill: #78A6C9;
+    }
+    &:active ~ .input-ico {
+      fill: #4584B4;
+    }
+  }
+}
+
+.input-ico  {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  fill: #B4CBDC;
+}
+.input-ico_personal {
+  top: 8px;
+  right: 11px;
+}
+.input-ico_mail {
+  top: 8px;
+  right: 12px;
 }
 
 .form__checkbox {
@@ -95,7 +129,7 @@
     &:before {
       content: '';
       position: absolute;
-      top: 0;
+      top: -4px;
       left: 0;
       height: 20px;
       width: 20px;
