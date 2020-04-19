@@ -1,0 +1,35 @@
+.collapse {
+    .form {
+      padding: 20px 23px 21px;
+    }
+  &.open {
+    .collapse__opener {
+      display: none;
+    }
+    .form {
+      padding: 30px 18px 22px;;
+    }
+  }
+}
+.collapse__opener {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  &:after {
+    content: url('/assets/images/arrow.svg');
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 22px;
+
+  }
+}
+.collapse__content {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  &.open {
+    // display: block;
+  }
+}
