@@ -99,3 +99,33 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .offer {
+    flex-direction: column;
+  }
+  .offer__item {
+    padding: 19px 4px 17px;
+    width: auto;
+    &:not(:first-child){
+      margin-top: 25px;
+    }
+  }
+  .offer__item__features {
+    margin: 10px 12px 27px;
+    p {
+      margin-right: 0;
+      flex-basis: 50%;
+      &:nth-child(even){
+        padding-left: 5px;
+      }
+    }
+  }
+  .offer__item__description {
+    line-height: 22px;
+  }
+  .offer__item__action {
+    padding: 0 10px;
+    margin-top: 13px;
+  }
+}

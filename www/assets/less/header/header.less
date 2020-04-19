@@ -7,7 +7,22 @@
   }
 }
 .header__logo {
-
+}
+@media screen and (max-width: 768px) {
+  .header { 
+    padding: 13px 0 12px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+    border-bottom: 0;   
+    .wrapper {
+      justify-content: center;
+    }
+  }
+  .header__logo {
+    img {
+      width: 122px;
+      height: 30px;
+    }
+  }
 }
 
 @import url('header-navigation.less');

@@ -2,17 +2,49 @@
   font-size: 20px;
   h1 {
     margin: 0;
-    display: inline-block;
-    padding: 1px 32px 5px 28px;
     font-size: 32px;
     line-height: 39px;
     font-weight: bold;
-    background: #FFD876;
-    border-radius: 30px;
+    span {
+      display: inline-block;
+      padding: 1px 32px 5px 28px;
+      background: #FFD876;
+      border-radius: 30px;
+    }
   }
   p {
     margin: 0;
     margin-top: 24px;
     line-height: 27px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hello {
+    h1 {
+      position: relative;
+      span {
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        &:before {
+          content: ' ';
+          position: absolute;
+          top: -1px;
+          right: -32px;
+          bottom: -5px;
+          left: -28px;
+          border-radius: 0 30px 30px 0;
+          background: #FFD876;
+          z-index: -1;
+        }
+      }
+    }
+    p {
+      margin-top: 14px;
+      line-height: 24px;
+    }
   }
 }
